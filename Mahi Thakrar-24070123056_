@@ -1,0 +1,32 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-12
+
+#include <iostream>
+using namespace std;
+
+class Practice{
+    int a,b;
+    public:
+    Practice(int m,int n){
+        a=m;
+        b=n;
+    }
+    
+    void display(){
+      cout<<"a="<<a<<endl<<"b="<<b;  
+    }
+};
+   
+
+int main() {
+    Practice p(1,2);
+    p.display();
+
+    return 0;
+}
+
+//Output:
+//a=1
+//b=2
