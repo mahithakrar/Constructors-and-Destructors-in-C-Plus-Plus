@@ -2,3 +2,53 @@
 //PRN:24070123056
 //ENTC A3
 //EXPERIMENT-12
+
+#include <iostream>
+using namespace std;
+
+class Student{
+    string name;
+    int PRN;
+    string branch;
+    char divi;
+    double fee;
+    
+    public:
+    Student(){
+        cout<<"Enter the Name:"<<endl;
+        cin>>name;
+        cout<<"Enter the PRN:"<<endl;
+        cin>>PRN;
+        cout<<"Enter the Branch Name:"<<endl;
+        cin>>branch;
+        cout<<"Enter the Division:"<<endl;
+        cin>>divi;
+        cout<<"Enter the Fee:"<<endl;
+        cin>>fee;
+    }
+    
+    void display(){
+        cout<<endl<<name<<"\t"<<PRN<<"\t"<<branch<<"\t"<<divi<<"\t"<<fee;
+    }
+};
+
+int main() {
+    Student s;
+    s.display();
+
+    return 0;
+}
+
+//Output:
+//Enter the Name:
+//Mahi
+//Enter the PRN:
+//2
+//Enter the Branch Name:
+//ENTC
+//Enter the Division:
+//A
+//Enter the Fee:
+//200000
+//
+//Mahi	2	ENTC	A	200000
