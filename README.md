@@ -225,6 +225,82 @@ This program highlights the importance of **constructors with arguments** for in
 
 ---
 
+## 4.Copy Constructor
+
+### Parameterized Constructor
+- A **parameterized constructor** is a constructor that takes arguments to initialize the data members of a class.  
+- It allows objects to be created with specific values at the time of instantiation.  
+- In this program, the parameterized constructor initializes `name`, `age`, `year`, and `divi` for the `Student` object.
+
+### Copy Constructor
+- A **copy constructor** is a special constructor used to create a new object as an exact copy of an existing object.  
+- It takes a reference to another object of the same class as its parameter.  
+- The copy constructor is invoked when:
+  - An object is initialized from another object of the same class.
+  - An object is passed by value to a function.
+  - An object is returned by value from a function.
+- In this program, the copy constructor copies all the details (`name`, `age`, `year`, and `divi`) from one student object into another and also prints `"Copy constructor called!"`.
+
+---
+
+## Algorithm
+
+1. **Start the program.**
+2. Define a `Student` class with data members:  
+   - `name` (string)  
+   - `age` (int)  
+   - `year` (int)  
+   - `divi` (char)  
+3. Implement a **parameterized constructor** that initializes the data members with given values.  
+4. Implement a **copy constructor** that:  
+   - Takes a reference to another `Student` object.  
+   - Copies all data members from the passed object.  
+   - Prints a message `"Copy constructor called!"`.  
+5. Create a `display()` function to print student details.  
+6. In the `main()` function:  
+   - Create object `s1` using the parameterized constructor and display its details.  
+   - Create object `s2` using the copy constructor with `s1` and display its details.  
+7. **End the program.**
+
+---
+
+## 5.Destructor Program
+
+### Constructor
+- A **constructor** is a special member function of a class that is automatically called when an object is created.  
+- Its purpose is to initialize objects and allocate necessary resources.  
+- In this program, the constructor increases the global variable `count` and displays the number of objects created.
+
+### Destructor
+- A **destructor** is a special member function of a class that is automatically called when an object goes out of scope or is explicitly deleted.  
+- Its purpose is to free resources and perform cleanup tasks.  
+- In this program, the destructor decreases the global variable `count` and displays the number of objects destroyed.
+
+### Object Lifecycle Demonstration
+- When objects are created, the constructor keeps track of how many objects currently exist.  
+- When objects go out of scope (for example, the block `{ destruct dd; }`), their destructor is invoked automatically, reducing the count.  
+- This demonstrates how C++ automatically manages object creation and destruction.
+
+---
+
+## Algorithm
+
+1. **Start the program.**
+2. Declare a global variable `count = 0` to track the number of objects.  
+3. Define a class `destruct` with:  
+   - A **constructor** that increments `count` and prints `"No. of objects created: <count>"`.  
+   - A **destructor** that decrements `count` and prints `"No. of objects destroyed: <count>"`.  
+4. In the `main()` function:  
+   - Create three objects `aa`, `bb`, and `cc`.  
+   - Observe constructor messages for each creation.  
+5. Create a block scope `{ ... }`:  
+   - Inside it, create one more object `dd`.  
+   - When the block ends, the destructor for `dd` is automatically called.  
+6. At the end of `main()`, destructors for `aa`, `bb`, and `cc` are invoked automatically.  
+7. **End the program.**
+
+---
+
 ## Conclusion
 Constructors and destructors are essential features of C++ that manage the **lifecycle of objects**:
 - **Constructors** ensure that objects are created in a **valid and initialized state** by assigning values to data members at the time of object creation.  
